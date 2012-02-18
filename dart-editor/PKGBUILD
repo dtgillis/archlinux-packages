@@ -3,7 +3,7 @@
 pkgname=dart-editor
 _pkgname=DartEditor
 pkgver=0.1.0.3934
-pkgrel=2
+pkgrel=3
 pkgdesc="Editor for the Dart programming language."
 arch=(i686 x86_64)
 url="http://www.dartlang.org/docs/getting-started/editor/index-linux.html"

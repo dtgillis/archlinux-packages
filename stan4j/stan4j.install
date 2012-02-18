@@ -2,7 +2,7 @@ post_install() {
   update-desktop-database -q
   echo "------------------------------------------------------------------------------------"
   echo "If you own a license key file for Stan, you can deploy it at :"
-  echo "/opt/stan/stan.lic"
+  echo "/opt/stan4j/stan.lic"
   echo "------------------------------------------------------------------------------------"
 }
 

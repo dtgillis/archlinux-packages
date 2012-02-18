@@ -1,0 +1,13 @@
+post_install() {
+  update-desktop-database -q
+  echo "------------------------------------------------------------------------------------"
+  echo "If you own a license key file for Stan, you can deploy it at :"
+  echo "/opt/stan/stan.lic"
+  echo "------------------------------------------------------------------------------------"
+}
+
+post_upgrade() {
+  post_install $1
+}
+
+# vim:set ts=2 sw=2 et:

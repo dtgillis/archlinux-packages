@@ -51,4 +51,10 @@
     <note priority="medium" time="1328960646">
         gchisto
     </note>
+    <note priority="medium" time="1330164219">
+        sabcli
+    </note>
+    <note priority="medium" time="1330298819">
+        pacman-fast-upgrade
+    </note>
 </todo>

@@ -2,7 +2,7 @@
 # Source: https://github.com/nicoulaj/archlinux-packages
 pkgname=gatling-stress-tool-git # Name collision with https://aur.archlinux.org/packages.php?ID=7159
 _pkgname=gatling
-pkgver=20120113
+pkgver=20120620
 pkgrel=1
 pkgdesc="An optimized stress test tool."
 arch=(any)

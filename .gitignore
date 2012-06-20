@@ -17,4 +17,5 @@
 *.rar
 *.py
 *.properties
+.*.swp
 

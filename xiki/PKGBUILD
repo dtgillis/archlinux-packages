@@ -7,7 +7,19 @@ pkgdesc="A shell console with GUI features."
 arch=(any)
 url="http://xiki.org"
 license=(MIT)
-depends=(ruby ruby-file-tail ruby-activesupport ruby-daemons ruby-net-scp ruby-net-sftp ruby-net-ssh ruby-rspec ruby-httparty ruby-method_source ruby-ruby_parser ruby-sourcify ruby-trogdoro-el4r)
+depends=('ruby'
+         'ruby-file-tail'
+         'ruby-activesupport'
+         'ruby-daemons'
+         'ruby-net-scp'
+         'ruby-net-sftp'
+         'ruby-net-ssh'
+         'ruby-rspec'
+         'ruby-httparty'
+         'ruby-method_source'
+         'ruby-ruby_parser'
+         'ruby-sourcify'
+         'ruby-trogdoro-el4r>=1.0.7')
 makedepends=(rubygems)
 changelog=Changelog
 conflicts=(${pkgname}-git)

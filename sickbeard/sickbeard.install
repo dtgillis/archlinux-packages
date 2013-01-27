@@ -1,5 +1,8 @@
 post_install() {
 
+  # Source Sickbeard config
+  . /etc/conf.d/sickbeard
+
   # Create or repair Sick-Beard user/group.
   if grep -q "^sickbeard" /etc/group &> /dev/null ; then
     groupmod -n sickbeard sickbeard &> /dev/null
@@ -7,14 +10,14 @@ post_install() {
     groupadd -r sickbeard &> /dev/null
   fi
   if grep -q "^sickbeard:" /etc/passwd 2> /dev/null ; then
-    usermod -s /bin/false -c "Sick-Beard daemon user" -d /var/lib/sickbeard -g sickbeard sickbeard &> /dev/null
+    usermod -s /bin/false -c "Sick-Beard daemon user" -d $SB_DATA -g sickbeard sickbeard &> /dev/null
   else
-    useradd -s /bin/false -c "Sick-Beard daemon user" -d /var/lib/sickbeard -g sickbeard -r sickbeard &> /dev/null
+    useradd -s /bin/false -c "Sick-Beard daemon user" -d $SB_DATA -g sickbeard -r sickbeard &> /dev/null
   fi
 
   # Create or repair Sick-Beard owned directories.
-  mkdir -p            /etc/sickbeard /var/log/sickbeard /var/lib/sickbeard
-  chown -R sickbeard: /etc/sickbeard /var/log/sickbeard /var/lib/sickbeard
+  mkdir -p            /etc/sickbeard /var/log/sickbeard $SB_DATA
+  chown -R sickbeard: /etc/sickbeard /var/log/sickbeard $SB_DATA
 }
 
 post_upgrade() {

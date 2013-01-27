@@ -1,0 +1,12 @@
+[Unit]
+Description=SickBeard daemon
+After=network.target
+
+[Service]
+User=sickbeard
+Group=sickbeard
+ExecStart=/usr/bin/sickbeard --nolaunch --daemon --quiet --config /var/lib/sickbeard/config.ini --datadir /var/lib/sickbeard --port 8081 --pidfile=/run/sickbeard/sickbeard.pid
+PIDFile=/run/sickbeard/sickbeard.pid
+
+[Install]
+WantedBy=multi-user.target

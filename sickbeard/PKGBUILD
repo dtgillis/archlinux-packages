@@ -3,7 +3,7 @@
 # Source: https://github.com/nicoulaj/archlinux-packages
 pkgname=sickbeard
 pkgver=alpha498
-pkgrel=1
+pkgrel=2
 pkgdesc="A PVR application that downloads and manages your TV shows."
 arch=(any)
 url="http://www.sickbeard.com"
@@ -38,6 +38,9 @@ build() {
   msg2 "Fix standalone Python scripts shebangs and permissions..."
   sed -i '1s/python/python2/' autoProcessTV/*.py
   chmod -v +x autoProcessTV/*.py
+
+  msg2 "Patch version.py..."
+  sed -i "1s/build Nonea/${pkgver}/" sickbeard/version.py
 }
 
 package() {

@@ -2,7 +2,7 @@
 # Source: https://github.com/nicoulaj/archlinux-packages
 pkgname=karun-git
 _pkgname=karun
-pkgver=20111115
+pkgver=20130127
 pkgrel=1
 pkgdesc="A Java graphical Pacman frontend."
 arch=(any)

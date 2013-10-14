@@ -15,7 +15,7 @@ options=(!strip)
 install=${pkgname}.install
 changelog=Changelog
 source=(http://www.yourkit.com/download/yjp-${pkgver}-linux.tar.bz2)
-md5sums=('4624031fd48a6614a1d2831b37d6b36d')
+md5sums=('06465f15bc08732fba283f54b3d27fd1')
 
 build() {
   msg2 "Generate scripts for /usr/bin..."
